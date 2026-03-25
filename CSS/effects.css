@@ -1,0 +1,106 @@
+.icons .icon:hover {
+    background-color: rgba(255, 255, 255, .831);
+    opacity: 1
+}
+
+.user-icon:hover {
+    opacity: 1;
+}
+
+
+.sg-btn:hover {
+    background-color: #fd496d;
+}
+
+
+.select-state:hover {
+    color: #ffffff48;
+}
+
+.select-state:focus {
+    outline: none;
+}
+
+
+.google-btn:hover {
+    background: #f9f9f9;
+}
+
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.book-btn:hover {
+    background: #fd323d;
+}
+
+.white-home-line:hover {
+    background-color: rgba(204, 203, 255, 0.16);
+}
+
+.left-line ul li:hover {
+    color: rgb(255, 255, 255);
+}
+
+.movie {
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.boxes .set-height:hover img {
+    transform: translateY(-5px);
+}
+
+.footer-section ul li a:hover {
+    color: #4ecdc4;
+    transform: translateX(5px);
+}
+
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+
+.social-icon:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.social-icon.facebook:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.social-icon.twitter:hover {
+    background: #000000;
+    border-color: #000000;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: #e6683c;
+}
+
+.social-icon.youtube:hover {
+    background: #ff0000;
+    border-color: #ff0000;
+}
+
+.social-icon.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+}
+
+/* 
+ all effect code should be here, like :focus :hover and any effects
+*/
