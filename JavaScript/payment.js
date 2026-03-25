@@ -265,9 +265,9 @@ async function saveBookingToBackend(bookingData, bookingId) {
         };
         
         console.log('Saving booking to backend:', payload);
-        console.log('Backend URL: http://localhost:8080/api/bookings');
+        console.log('Backend URL: https://eventify-backend.railway.app/api/bookings');
         
-        const response = await fetch('http://localhost:8080/api/bookings', {
+        const response = await fetch('https://eventify-backend.railway.app/api/bookings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -194,7 +194,7 @@ registerBtn.addEventListener('click', () => {
         password: passwords[0]
     };
 
-    fetch('http://localhost:8080/api/auth/register', {
+    fetch('https://eventify-backend.railway.app/api/auth/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -237,7 +237,7 @@ loginBtn.addEventListener('click', () => {
 
     const payload = { email, password };
 
-    fetch('http://localhost:8080/api/auth/login', {
+    fetch('https://eventify-backend.railway.app/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
