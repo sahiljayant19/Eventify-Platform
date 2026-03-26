@@ -14,7 +14,7 @@ async function loadUserBookings() {
 
     try {
         // Fetch bookings for specific user
-        const response = await fetch(`https://eventify-backend.railway.app/api/bookings?userId=${user.id}`, {
+        const response = await fetch(`http://localhost:8080/api/bookings?userId=${user.id}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -111,7 +111,7 @@ async function viewTicket(bookingId) {
     
     try {
         // Fetch full booking details
-        const response = await fetch(`https://eventify-backend.railway.app/api/bookings/${bookingId}`, {
+        const response = await fetch(`http://localhost:8080/api/bookings/${bookingId}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -695,7 +695,7 @@ function showCancelConfirmationPopup(bookingId) {
 // Proceed with actual cancellation
 async function proceedWithCancellation(bookingId) {
     try {
-        const response = await fetch(`https://eventify-backend.railway.app/api/bookings/${bookingId}`, {
+        const response = await fetch(`http://localhost:8080/api/bookings/${bookingId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

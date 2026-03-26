@@ -29,8 +29,14 @@ public class BookingController {
 
     @PostMapping
     public ResponseEntity<BookingResponse> createBooking(@RequestBody BookingRequest request) {
+        // Check if userId is provided
+        Long userId = request.getUserId();
+        if (userId == null) {
+            return ResponseEntity.badRequest().body(new BookingResponse("User ID is required. Please log in.", null));
+        }
+        
         // Get user from request
-        User user = userRepository.findById(request.getUserId()).orElse(null);
+        User user = userRepository.findById(userId).orElse(null);
         
         if (user == null) {
             return ResponseEntity.badRequest().body(new BookingResponse("User not found", null));
@@ -72,6 +78,9 @@ public class BookingController {
     
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBooking(@PathVariable Long id) {
+        if (id == null) {
+            return ResponseEntity.badRequest().build();
+        }
         if (!bookingRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }

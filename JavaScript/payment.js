@@ -250,6 +250,7 @@ async function saveBookingToBackend(bookingData, bookingId) {
         
         // Log user info for debugging
         console.log('Current user:', user);
+        console.log('User ID:', user?.id);
         
         const payload = {
             eventName: bookingData.eventName,
@@ -265,9 +266,9 @@ async function saveBookingToBackend(bookingData, bookingId) {
         };
         
         console.log('Saving booking to backend:', payload);
-        console.log('Backend URL: https://eventify-backend.railway.app/api/bookings');
+        console.log('Backend URL: http://localhost:8080/api/bookings');
         
-        const response = await fetch('https://eventify-backend.railway.app/api/bookings', {
+        const response = await fetch('http://localhost:8080/api/bookings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -286,9 +287,9 @@ async function saveBookingToBackend(bookingData, bookingId) {
             try {
                 const errorData = JSON.parse(errorText);
                 console.error('Parsed error data:', errorData);
-                showPopupMessage('Backend Error', `Booking confirmed but failed to save to server: ${errorData.error || 'Unknown error'}`, 'error');
+                showPopupMessage('Booking Error', errorData.message || errorData.error || 'Failed to save booking', 'error');
             } catch {
-                showPopupMessage('Backend Error', `Booking confirmed but failed to save to server. Status: ${response.status}`, 'error');
+                showPopupMessage('Booking Error', `Failed to save booking. Status: ${response.status}`, 'error');
             }
             return;
         }
