@@ -140,7 +140,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support, please visit our [Support Page](support.html) or create an issue in this repository.
 
-📧 **Email:** sahiljayant19@gmail.com
+📧 **Email:** sahiljayantwork@gmail.com
 💬 **GitHub Issues:** [Create an Issue](https://github.com/sahiljayant19/Eventify-Platform/issues)
 
 ---
