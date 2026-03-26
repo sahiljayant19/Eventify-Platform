@@ -134,17 +134,18 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Author
 
-**Your Name** - *Initial work* - [YourGitHubUsername](https://github.com/YourGitHubUsername)
+**Sahil Jayant** - *Initial work* - [sahiljayant19](https://github.com/sahiljayant19)
 
 ## 📞 Support
 
-For support, please visit our [Support Page](https://your-domain.com/support.html) or create an issue in this repository.
+For support, please visit our [Support Page](support.html) or create an issue in this repository.
+
+📧 **Email:** sahiljayant19@gmail.com
+💬 **GitHub Issues:** [Create an Issue](https://github.com/sahiljayant19/Eventify-Platform/issues)
 
 ---
 
 ⭐ **Star this repository if it helped you!**
-
-## 🎯 Interview Ready
 
 This project demonstrates:
 - **Full-stack development** skills
@@ -155,5 +156,3 @@ This project demonstrates:
 - **Security best practices**
 - **Version control** with Git
 - **Problem-solving** abilities
-
-Perfect for technical interviews and portfolio showcase!
