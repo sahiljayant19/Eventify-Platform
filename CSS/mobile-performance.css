@@ -1,0 +1,67 @@
+/* Mobile Performance Optimizations */
+@media (max-width: 799px) {
+    /* Reduce complex gradients for mobile performance */
+    body {
+        /* Replace complex gradients with solid colors on mobile */
+        background: #1a1a2e !important;
+    }
+    
+    /* Fix navbar colors to match theme */
+    .navbar {
+        background: #1b1b34 !important;
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .navLeft {
+        background: #01011c !important;
+    }
+    
+    /* Optimize animated elements */
+    .themed-divider .divider-glow {
+        background: #4ecdc4 !important;
+        box-shadow: none !important;
+    }
+    
+    .premiere-wrapper {
+        background: rgba(0, 0, 0, 0.9) !important;
+        background-color: #1a1a2e !important;
+    }
+    
+    /* Simplify button gradients */
+    .book-btn,
+    .primary-btn,
+    .sg-btn {
+        background: #ff6b6b !important;
+        background-image: none !important;
+        transition: background-color 0.3s ease !important;
+    }
+    
+    /* Optimize footer */
+    footer {
+        background: #1a1a2e !important;
+    }
+    
+    /* Disable heavy animations on mobile */
+    .event-card {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    /* Reduce shadow effects */
+    .payment-popup,
+    .auth-box {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    /* Optimize images */
+    img {
+        transform: translateZ(0) !important;
+        backface-visibility: hidden !important;
+    }
+    
+    /* Improve scrolling performance */
+    body {
+        -webkit-overflow-scrolling: touch !important;
+        overflow: auto !important;
+    }
+}

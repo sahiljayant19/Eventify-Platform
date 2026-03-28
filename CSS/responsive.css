@@ -336,9 +336,9 @@
 
 
 @media (max-width:600px) {
-    .modal-overlay {
-        width: 95%;
-    }
+    /* .modal-overlay {
+        width: 100%;
+    } */
 
     .auth-box {
         width: 320px;
