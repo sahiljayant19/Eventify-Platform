@@ -248,11 +248,10 @@
 
 @media (max-width:799px) {
 
-    .navLine {
-
-        display: none
+    .rightLine,
+    .state {
+        margin-left: 5vw;
     }
-
 
 
     .footer-section,
@@ -333,12 +332,13 @@
 
 }
 
-
-
 @media (max-width:600px) {
-    /* .modal-overlay {
-        width: 100%;
-    } */
+    .navLine {
+        display: none;
+    }
+    .navLeft {
+        display: none;
+    }
 
     .auth-box {
         width: 320px;
@@ -386,7 +386,7 @@
 
     .mobile-nav-links {
 
-        display: flex;
+        display: none;
 
         align-items: flex-start;
 

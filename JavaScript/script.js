@@ -1,6 +1,8 @@
 // Variables are defined in variables.js (loaded before this file)
 import { toggleNav, menu, nav, myBookingLink, homeLink, aboutLink, supportLink, authModal, registerView, loginView, toLogin, toRegister, closeModal, signInBtn, signOutBtn, userDisplayName, authBox, registerName, registerEmail, registerBtn, registerPassword, loginEmail, loginPassword, loginBtn, show_el, hide_el } from './variables.js';
 
+// Get mobile navigation links element
+const mobileNavLinks = document.querySelector('.mobile-nav-links');
 
 let menuClicked = false;
 
@@ -64,6 +66,10 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 600) { // Runtime condition
         nav.style.height = '64px';
         toggleNav.style.display = 'flex';
+        // Hide mobile navigation links when going to desktop view
+        if (mobileNavLinks) {
+            mobileNavLinks.style.display = 'none';
+        }
         show_el.map(showElements);
         // Re-apply auth UI state so sign in doesn't reappear when logged in
         applyStoredUserToNavbar();
@@ -80,6 +86,10 @@ menu.addEventListener('click', () => {
     if (toggleNav.style.display == 'flex') { // Condition for hide elements
         menu.innerHTML = `<img src="Resource/img/menu.png" alt="" width="30px" id="menuImg">`
         nav.style.height = '64px';
+        // Hide mobile navigation links
+        if (mobileNavLinks) {
+            mobileNavLinks.style.display = 'none';
+        }
         setTimeout(() => {
             hide_el.map(hideElements);
         }, 50);
@@ -90,6 +100,10 @@ menu.addEventListener('click', () => {
         nav.style.height = '400px';
         setTimeout(() => {
             toggleNav.style.display = 'flex';
+            // Show mobile navigation links
+            if (mobileNavLinks) {
+                mobileNavLinks.style.display = 'flex';
+            }
             show_el.map(showElements);
             // Ensure auth UI stays consistent when menu opens in mobile view
             applyStoredUserToNavbar();
@@ -280,6 +294,10 @@ loginBtn.addEventListener('click', () => {
 // On page load, keep user logged-in display if info exists
 window.addEventListener('DOMContentLoaded', () => {
     applyStoredUserToNavbar();
+    // Hide mobile navigation links by default
+    if (mobileNavLinks) {
+        mobileNavLinks.style.display = 'none';
+    }
 });
 
 // Sign out: clear local storage and restore Sign in button
