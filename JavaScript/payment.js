@@ -180,27 +180,6 @@ function generateQRCodeGoogleCharts(text) {
     qrContainer.appendChild(img);
 }
 
-// Copy UPI ID to clipboard
-function copyUpiId() {
-    const upiId = '9079184709@ybl';
-    
-    navigator.clipboard.writeText(upiId).then(() => {
-        // Show success message
-        const button = event.target.closest('.copy-btn');
-        const originalText = button.innerHTML;
-        button.innerHTML = '<img src="Resource/svg/check.svg" alt="Copied"> Copied!';
-        button.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
-        
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.style.background = 'linear-gradient(45deg, #007bff, #0056b3)';
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-        showPopupMessage('Copy Failed', 'Failed to copy UPI ID. Please copy manually: 9079184709@ybl', 'error');
-    });
-}
-
 // Start payment status checking
 function startPaymentStatusCheck() {
     const statusElement = document.getElementById('paymentStatus');
