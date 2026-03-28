@@ -247,6 +247,9 @@
 
 
 @media (max-width:799px) {
+    .auth-box {
+        margin-right: 20px;
+    }
 
     .rightLine,
     .state {
