@@ -3,17 +3,17 @@
     /* Reduce complex gradients for mobile performance */
     body {
         /* Replace complex gradients with solid colors on mobile */
-        background: #1a1a2e !important;
+        background: #19194f !important;
     }
     
     /* Fix navbar colors to match theme */
     .navbar {
-        background: #1b1b34 !important;
+        background: #383868 !important;
         border-bottom: 1px solid #333 !important;
     }
     
     .navLeft {
-        background: #01011c !important;
+        background: #383868 !important;
     }
     
     /* Optimize animated elements */
