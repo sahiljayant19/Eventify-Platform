@@ -339,9 +339,9 @@
     .navLine {
         display: none;
     }
-    .navLeft {
+    /* .navLeft {
         display: none;
-    }
+    } */
 
     .auth-box {
         width: 320px;
